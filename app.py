@@ -29,7 +29,7 @@ def main():
         with middle:
             plot_signal_plotly(X, modulation_type)
 
-        model = load_model('cldnn_modelv11.keras')
+        model = load_model('model/cldnn_modelv12.keras')
 
         if st.button("Make Predictions", key="predict_button", help="Click to make predictions"):
             predictions = np.argmax(model.predict(X), axis=1)
